@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "vcqK+U6n4sA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MO ADEL\\Desktop\\طز فى الكلية\\open gl\\Lpp_Solver\\Lpp_Solver.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\google.ortools\\9.14.6206\\google.ortools.9.14.6206.nupkg.sha512",
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\google.ortools.runtime.linux-arm64\\9.14.6206\\google.ortools.runtime.linux-arm64.9.14.6206.nupkg.sha512",
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\google.ortools.runtime.linux-x64\\9.14.6206\\google.ortools.runtime.linux-x64.9.14.6206.nupkg.sha512",
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\google.ortools.runtime.osx-arm64\\9.14.6206\\google.ortools.runtime.osx-arm64.9.14.6206.nupkg.sha512",
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\google.ortools.runtime.osx-x64\\9.14.6206\\google.ortools.runtime.osx-x64.9.14.6206.nupkg.sha512",
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\google.ortools.runtime.win-x64\\9.14.6206\\google.ortools.runtime.win-x64.9.14.6206.nupkg.sha512",
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\google.protobuf\\3.31.1\\google.protobuf.3.31.1.nupkg.sha512",
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\lpsolvedotnet\\4.1.0\\lpsolvedotnet.4.1.0.nupkg.sha512",
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+    "C:\\Users\\MO ADEL\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512"
+  ],
+  "logs": []
+}

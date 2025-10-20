@@ -1,0 +1,6 @@
+@Lpp_Solver_HostAddress = http://localhost:5152
+
+GET {{Lpp_Solver_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -3,7 +3,7 @@
     public class ConstraintPlotLine
     {
         public string Label { get; set; }
-        public Point point1 { get; set; }
-        public Point point2 { get; set; }
+        public Point Point1 { get; set; }
+        public Point Point2 { get; set; }
     }
 }

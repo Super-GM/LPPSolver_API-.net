@@ -1,0 +1,121 @@
+﻿@page
+@model Lpp_Solver.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "LP Optimization Solver";
+}
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="~/js/lp_solver_ui.js"></script>
+<link rel="stylesheet" href="~/css/site.css" />
+
+<style>
+    /* Basic inline styles for a clean layout */
+    .main-container {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    .input-section {
+        flex: 1;
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .results-section {
+        flex: 1;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .control-group {
+        margin-bottom: 15px;
+    }
+
+    .input-row label, .input-row input {
+        margin-right: 10px;
+    }
+
+    .action-button {
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+</style>
+
+<h1>Linear Programming Solver</h1>
+
+<div class="main-container">
+
+    <div class="input-section">
+        <h2>Solution Configuration</h2>
+
+        <div class="control-group">
+            <label for="optType">Optimization Type:</label>
+            <select id="optType" class="form-control">
+                <option value="Maximize" selected>Maximize (Max)</option>
+                <option value="Minimize">Minimize (Min)</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="solveMethod">Solution Method:</label>
+            <select id="solveMethod" class="form-control">
+                <option value="Numerical" selected>Numerical (Any N)</option>
+                <option value="2D_Graphical">Graphical (N=2)</option>
+                <option value="3D_Graphical">Graphical (N=3)</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="numVars">Number of Variables (N):</label>
+            <input type="number" id="numVars" value="2" min="2" max="5" onchange="generateInputFields()" class="form-control" style="width: 60px;">
+        </div>
+
+        <div class="control-group">
+            <label for="numConstraints">Number of Constraints (M):</label>
+            <input type="number" id="numConstraints" value="3" min="1" max="10" onchange="generateInputFields()" class="form-control" style="width: 60px;">
+        </div>
+
+        <button onclick="generateInputFields()" class="action-button generate-button">Generate Fields</button>
+        <hr />
+
+        <div id="dataInputArea">
+        </div>
+
+        <button onclick="sendSolveRequestFromFields()" class="action-button solve-button" style="width: 100%;">Solve Problem</button>
+    </div>
+
+    <div class="results-section">
+        <h2>Solution Results</h2>
+        <div class="summary-box">
+            <p>Status: <strong id="status">Ready</strong></p>
+            <p>Objective Value (Z): <strong id="objectiveValue">--</strong></p>
+            <div id="variableValues"></div>
+        </div>
+
+        <details>
+            <summary>Show Raw JSON Response (Debug)</summary>
+            <pre id="jsonResult" style="max-height: 150px; overflow: auto; font-size: 0.8em;"></pre>
+        </details>
+    </div>
+</div>
+
+<div class="plot-area">
+    <hr />
+    <h2>Graphical Visualization</h2>
+    <div id="lpPlot" style="height: 600px; width: 100%;"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', generateInputFields);
+</script>

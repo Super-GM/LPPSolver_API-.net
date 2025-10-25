@@ -1,8 +1,40 @@
 [
   {
     "ContainingType": "Lpp_Solver.Controllers.LPPsolverController",
-    "Method": "Solve",
-    "RelativePath": "api/LPPsolver",
+    "Method": "SolveGraphically2D",
+    "RelativePath": "api/LPPsolver/graphical2D",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lpp",
+        "Type": "Lpp_Solver.Models.LPP",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lpp_Solver.Controllers.LPPsolverController",
+    "Method": "SolveGraphically3D",
+    "RelativePath": "api/LPPsolver/graphical3D",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lpp",
+        "Type": "Lpp_Solver.Models.LPP",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lpp_Solver.Controllers.LPPsolverController",
+    "Method": "SolveNumerically",
+    "RelativePath": "api/LPPsolver/Numerical",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

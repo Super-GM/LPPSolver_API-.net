@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lpp_Solver")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2122909f97bf8286bac90baddf2b8531b651bfb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lpp_Solver")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lpp_Solver")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,6 +3,8 @@ namespace Lpp_Solver.services
 {
     public interface ILPSolverservice
     {
-        SolutionResult Solve(LPP lPP);
+        SolutionResult SolveNumerically(LPP problem);
+        GraphicalResult3D SolveGraphically3D(LPP lpp);
+        GraphicalResult SolveGraphically2D(LPP problem);
     }
 }

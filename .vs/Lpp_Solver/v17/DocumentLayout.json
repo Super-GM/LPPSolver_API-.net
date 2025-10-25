@@ -3,44 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\controllers\\lppsolvercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:controllers\\lppsolvercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\wwwroot\\js\\lp_solver_ui.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:wwwroot\\js\\lp_solver_ui.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\controllers\\lppsolvercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:controllers\\lppsolvercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\services\\lpsolverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:services\\lpsolverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\services\\ilpsolverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:services\\ilpsolverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\models\\constraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:models\\constraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\models\\lpp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:models\\lpp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\models\\graphicalresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:models\\graphicalresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\models\\constraintplotline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:models\\constraintplotline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\models\\solutionresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:models\\solutionresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\models\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:models\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|c:\\users\\mo adel\\desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\lpp_solver\\models\\constraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C3FC576-8CFB-4390-8C45-B8E37BF3972C}|Lpp_Solver.csproj|solutionrelative:models\\constraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,19 +38,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GraphicalResult.cs",
-              "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\GraphicalResult.cs",
-              "RelativeDocumentMoniker": "Models\\GraphicalResult.cs",
-              "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\GraphicalResult.cs",
-              "RelativeToolTip": "Models\\GraphicalResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Constraint.cs",
+              "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\Constraint.cs",
+              "RelativeDocumentMoniker": "Models\\Constraint.cs",
+              "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\Constraint.cs",
+              "RelativeToolTip": "Models\\Constraint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T13:21:49.42Z",
+              "WhenOpened": "2025-10-25T10:14:07.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LPP.cs",
+              "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\LPP.cs",
+              "RelativeDocumentMoniker": "Models\\LPP.cs",
+              "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\LPP.cs",
+              "RelativeToolTip": "Models\\LPP.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T10:08:07.744Z",
               "EditorCaption": ""
             },
             {
@@ -73,113 +74,61 @@
               "RelativeDocumentMoniker": "Models\\ConstraintPlotLine.cs",
               "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\ConstraintPlotLine.cs",
               "RelativeToolTip": "Models\\ConstraintPlotLine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T13:19:43.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Point.cs",
-              "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\Point.cs",
-              "RelativeDocumentMoniker": "Models\\Point.cs",
-              "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\Point.cs",
-              "RelativeToolTip": "Models\\Point.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T13:18:16.403Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAABmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T18:58:24.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LpSolverService.cs",
-              "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\services\\LpSolverService.cs",
-              "RelativeDocumentMoniker": "services\\LpSolverService.cs",
-              "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\services\\LpSolverService.cs",
-              "RelativeToolTip": "services\\LpSolverService.cs",
-              "ViewState": "AgIAAMEAAADAMjMzMzMlwM0AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T19:31:48.809Z",
+              "WhenOpened": "2025-10-25T09:56:51.493Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ILPSolverservice.cs",
-              "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\services\\ILPSolverservice.cs",
-              "RelativeDocumentMoniker": "services\\ILPSolverservice.cs",
-              "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\services\\ILPSolverservice.cs",
-              "RelativeToolTip": "services\\ILPSolverservice.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Title": "LpSolverService.cs",
+              "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\services\\LpSolverService.cs",
+              "RelativeDocumentMoniker": "services\\LpSolverService.cs",
+              "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\services\\LpSolverService.cs",
+              "RelativeToolTip": "services\\LpSolverService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAABAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T19:27:11.202Z",
+              "WhenOpened": "2025-10-24T20:00:13.341Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SolutionResult.cs",
-              "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\SolutionResult.cs",
-              "RelativeDocumentMoniker": "Models\\SolutionResult.cs",
-              "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\SolutionResult.cs",
-              "RelativeToolTip": "Models\\SolutionResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T19:21:25.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "LPPsolverController.cs",
               "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Controllers\\LPPsolverController.cs",
               "RelativeDocumentMoniker": "Controllers\\LPPsolverController.cs",
               "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Controllers\\LPPsolverController.cs",
               "RelativeToolTip": "Controllers\\LPPsolverController.cs",
-              "ViewState": "AgIAABkAAAAAoJmZmZnJvx8AAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T19:16:05.988Z",
+              "WhenOpened": "2025-10-24T17:31:56.749Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LPP.cs",
-              "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\LPP.cs",
-              "RelativeDocumentMoniker": "Models\\LPP.cs",
-              "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\LPP.cs",
-              "RelativeToolTip": "Models\\LPP.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T19:08:24.888Z",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-24T17:27:43.751Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Constraint.cs",
-              "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\Constraint.cs",
-              "RelativeDocumentMoniker": "Models\\Constraint.cs",
-              "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\Models\\Constraint.cs",
-              "RelativeToolTip": "Models\\Constraint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T19:06:22.753Z",
+              "DocumentIndex": 0,
+              "Title": "lp_solver_ui.js",
+              "DocumentMoniker": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\wwwroot\\js\\lp_solver_ui.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\lp_solver_ui.js",
+              "ToolTip": "C:\\Users\\MO ADEL\\Desktop\\\u0637\u0632 \u0641\u0649 \u0627\u0644\u0643\u0644\u064A\u0629\\open gl\\Lpp_Solver\\wwwroot\\js\\lp_solver_ui.js",
+              "RelativeToolTip": "wwwroot\\js\\lp_solver_ui.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-24T17:11:48.41Z",
               "EditorCaption": ""
             }
           ]

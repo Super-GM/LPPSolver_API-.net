@@ -11,33 +11,16 @@ namespace Lpp_Solver.services
 {
     public class LpSolverService : ILPSolverservice
     {
-        public SolutionResult Solve(LPP problem)
-        {
-            // number of variables
-            int N = problem.Objectivecoefficient?.Length ?? 0;
-            if (problem.SolveGraphically)
-            {
-                if (N != 2)
-                {
-                    throw new ArgumentException("For Grapically solution you need two variables");
-                }
-                return SolveGraphically(problem);
-            }
-            else
-            {
-                return SolveNumerically(problem);
-            }
-        }
         private bool IsMaximization(LPP problem)
         {
             var op = problem.OptimizationType?.Trim().ToLowerInvariant() ?? "";
             return op == "max" || op == "maximize" || op == "maximization" || op == "maximize ";
         }
 
-        private SolutionResult SolveNumerically(LPP problem)
+        public SolutionResult SolveNumerically(LPP problem)
         {
-            int N = problem.Objectivecoefficient?.Length ?? 0;
-            if (N == 0 || problem.constraints == null)
+            int N = problem.ObjectiveCoefficients?.Length ?? 0;
+            if (N == 0 || problem.Constraints == null)
             {
                 throw new ArgumentException("incomplete problem data");
             }
@@ -57,10 +40,10 @@ namespace Lpp_Solver.services
             }
 
             // (Constraints)
-            foreach (var constraint in problem.constraints)
+            foreach (var constraint in problem.Constraints)
             {
                 // المكتبة بتتعامل مع القيود على انها مصفوفات و لازم يكون عدد المتغيرات فيها نفس العدد اللى فى المسئلة
-                if (constraint.coefficient == null || constraint.coefficient.Length != N)
+                if (constraint.Coefficients == null || constraint.Coefficients.Length != N)
                 {
                     throw new ArgumentException("the number of coofficient in the constraint not match with the number of variables");
                 }
@@ -70,12 +53,12 @@ namespace Lpp_Solver.services
                 LinearExpr lhs = new LinearExpr();
                 for (int i = 0; i < N; i++)
                 {
-                    lhs +=  constraint.coefficient[i] * x[i];
+                    lhs +=  constraint.Coefficients[i] * x[i];
                 }
-                double rhs = constraint.righthandside;
+                double rhs = constraint.RightHandSide;
 
                 // the type of relation <= or >= or =
-                switch (constraint.relation)
+                switch (constraint.Relation)
                 {
                     case "<=":
                          solver.Add(lhs <= rhs);
@@ -87,7 +70,7 @@ namespace Lpp_Solver.services
                         solver.Add(lhs == rhs);
                         break;
                     default:
-                        throw new ArgumentException($" Ruls error : (invalid relation : {constraint.relation})");
+                        throw new ArgumentException($" Ruls error : (invalid relation : {constraint.Relation})");
                 }
             }
 
@@ -96,7 +79,7 @@ namespace Lpp_Solver.services
             for (int i = 0; i < N; i++)
             {
                 //in here we know the coofficients of the variables in the objective function Ya jo
-                objective.SetCoefficient(x[i], problem.Objectivecoefficient[i]);
+                objective.SetCoefficient(x[i], problem.ObjectiveCoefficients[i]);
             }
 
             // the type of Optimization Ya jo
@@ -132,23 +115,36 @@ namespace Lpp_Solver.services
             }
             return result;
         }
-        private Point SolveTwoEquations(Lpp_Solver.Models.Constraint C1 ,Lpp_Solver.Models.Constraint C2 )
+        private Point SolveTwoEquations(Lpp_Solver.Models.Constraint C1, Lpp_Solver.Models.Constraint C2)
         {
-            double a1 = C1.coefficient[0];
-            double b1 = C1.coefficient[1];
-            double d1 = C1.righthandside;
+            if (C1 == null || C2 == null)
+                throw new ArgumentNullException("One or both constraints are null.");
 
-            double a2 = C2.coefficient[0];
-            double b2 = C2.coefficient[1];
-            double d2 = C2.righthandside;
-            double det = a1 * b2 - a2 * b1;//لو بصفر مش هيكون فى تقاطع 
-            if (Math.Abs(det) < 1e-9)//هنا لو قيمة المحدد صغيرة جدا معناها اننا مش هنعرف نحل السؤال 
+            if (C1.Coefficients == null || C2.Coefficients == null)
+                throw new ArgumentNullException("Coefficient array is null.");
+
+            if (C1.Coefficients.Length < 2 || C2.Coefficients.Length < 2)
+                throw new ArgumentException("Each constraint must have at least two coefficients.");
+
+            double a1 = C1.Coefficients[0];
+            double b1 = C1.Coefficients[1];
+            double d1 = C1.RightHandSide;
+
+            double a2 = C2.Coefficients[0];
+            double b2 = C2.Coefficients[1];
+            double d2 = C2.RightHandSide;
+
+            double det = a1 * b2 - a2 * b1;
+            if (Math.Abs(det) < 1e-9)
             {
+                // لا يوجد تقاطع حقيقي (المستقيمان متوازيان)
                 return null;
             }
-            double x1 = (d1 * b2 - d2 * b1)/det;
-            double x2 = (a1 * d2 - a2 * d1)/det;
-            return new Point { X=x1, Y = x2 };
+
+            double x1 = (d1 * b2 - d2 * b1) / det;
+            double x2 = (a1 * d2 - a2 * d1) / det;
+
+            return new Point { X = x1, Y = x2 };
         }
         private bool IsFeasible(Point p, List<Lpp_Solver.Models.Constraint> allConstraints)
         {
@@ -156,10 +152,10 @@ namespace Lpp_Solver.services
 
             foreach (var constraint in allConstraints)
             {
-                double lhs = constraint.coefficient[0] * p.X + constraint.coefficient[1] * p.Y;
-                double rhs = constraint.righthandside;
+                double lhs = constraint.Coefficients[0] * p.X + constraint.Coefficients[1] * p.Y;
+                double rhs = constraint.RightHandSide;
 
-                switch (constraint.relation)
+                switch (constraint.Relation)
                 {
                     case "<=":
                         if (lhs > rhs + tolerance) return false;
@@ -174,54 +170,79 @@ namespace Lpp_Solver.services
             }
             return true;
         }
-        private GraphicalResult SolveGraphically(LPP problem)
+        public GraphicalResult SolveGraphically2D(LPP problem)
         {
-            var allConstraints = problem.constraints;
-            var feasibleVertices = new List<Point>();
-            var virtualConstraints = new List<Lpp_Solver.Models.Constraint> //تحديد الربع الاول
+            if (problem.Constraints.Any(c => c.Coefficients == null))
             {
-                 new Lpp_Solver.Models.Constraint { coefficient = new double[] { 1, 0 }, relation = ">=", righthandside = 0 },//محورx
-                 new Lpp_Solver.Models.Constraint { coefficient = new double[] { 0, 1 }, relation = ">=", righthandside = 0 }//محور y
-            };
-            allConstraints.AddRange(virtualConstraints);
+                throw new Exception("One or more constraints have null coefficients!");
+            }
+            if (problem == null)
+                throw new ArgumentNullException(nameof(problem), "Problem data cannot be null.");
+
+            if (problem.Constraints == null || problem.Constraints.Count == 0)
+                throw new ArgumentException("No constraints provided.");
+
+            var allConstraints = new List<Lpp_Solver.Models.Constraint>(problem.Constraints);
+
+            // ضمان تحديد الربع الأول
+            allConstraints.AddRange(new[]
+            {
+        new Lpp_Solver.Models.Constraint { Coefficients = new double[] { 1, 0 }, Relation = ">=", RightHandSide = 0 },
+        new Lpp_Solver.Models.Constraint { Coefficients = new double[] { 0, 1 }, Relation = ">=", RightHandSide = 0 }
+    });
+
+            var feasibleVertices = new List<Point>();
+
             for (int i = 0; i < allConstraints.Count; i++)
             {
                 for (int j = i + 1; j < allConstraints.Count; j++)
                 {
                     var c1 = allConstraints[i];
                     var c2 = allConstraints[j];
+
                     var intersectionPoint = SolveTwoEquations(c1, c2);
-                    if (intersectionPoint != null && IsFeasible(intersectionPoint, allConstraints))
+                    if (intersectionPoint == null) continue;
+
+                    if (IsFeasible(intersectionPoint, allConstraints))
                     {
                         feasibleVertices.Add(intersectionPoint);
                     }
                 }
             }
+
+            // إزالة النقاط المكررة
             feasibleVertices = feasibleVertices
-            .GroupBy(p => new { X1 = Math.Round(p.X, 5), X2 = Math.Round(p.Y, 5) })
-            .Select(g => g.First())
-            .ToList();
-            var objectiveCoeffs = problem.Objectivecoefficient;
-            Point optimalPoint = null;
+                .GroupBy(p => new { X = Math.Round(p.X, 5), Y = Math.Round(p.Y, 5) })
+                .Select(g => g.First())
+                .ToList();
+
+            if (feasibleVertices.Count == 0)
+                return new GraphicalResult { Status = "Infeasible", FeasibleVertices = new List<Point>() };
+
+            var objectiveCoeffs = problem.ObjectiveCoefficients;
             bool isMax = IsMaximization(problem);
+
             double bestZ = isMax ? double.NegativeInfinity : double.PositiveInfinity;
+            Point optimalPoint = null;
+
             foreach (var p in feasibleVertices)
             {
                 p.Z = objectiveCoeffs[0] * p.X + objectiveCoeffs[1] * p.Y;
 
-                if (isMax)
+                if (isMax && p.Z > bestZ)
                 {
-                    if (p.Z > bestZ) { bestZ = p.Z; optimalPoint = p; }
+                    bestZ = p.Z;
+                    optimalPoint = p;
                 }
-                else
+                else if (!isMax && p.Z < bestZ)
                 {
-                    if (p.Z < bestZ) { bestZ = p.Z; optimalPoint = p; }
+                    bestZ = p.Z;
+                    optimalPoint = p;
                 }
             }
+
             if (optimalPoint == null)
-            {
-                return new GraphicalResult { Status = "Infeasible", FeasibleVertices = new List<Point>() };
-            }
+                return new GraphicalResult { Status = "Infeasible", FeasibleVertices = feasibleVertices };
 
             return new GraphicalResult
             {
@@ -230,6 +251,110 @@ namespace Lpp_Solver.services
                 FeasibleVertices = feasibleVertices,
                 OptimalPoint = optimalPoint,
             };
+        }
+        private point3D SolveThreeEquations(Lpp_Solver.Models.Constraint C1, Lpp_Solver.Models.Constraint C2, Lpp_Solver.Models.Constraint C3)
+        {
+            double a1 = C1.Coefficients[0], b1 = C1.Coefficients[1], c11 = C1.Coefficients[2], d1 = C1.RightHandSide;
+            double a2 = C2.Coefficients[0], b2 = C2.Coefficients[1], c22 = C2.Coefficients[2], d2 = C2.RightHandSide;
+            double a3 = C3.Coefficients[0], b3 = C3.Coefficients[1], c33 = C3.Coefficients[2], d3 = C3.RightHandSide;
+            double det = a1 * (b2 * c33 - c22 * b3) - b1 * (a2 * c33 - c22 * a3) + c11 * (a2 * b3 - b2 * a3);
+            if (Math.Abs(det) < 1e-9)
+                return null;
+            double dx = d1 * (b2 * c33 - c22 * b3) - b1 * (d2 * c33 - c22 * d3) + c11 * (d2 * b3 - b2 * d3);
+            double dy = a1 * (d2 * c33 - c22 * d3) - d1 * (a2 * c33 - c22 * a3) + c11 * (a2 * d3 - d2 * a3);
+            double dz = a1 * (b2 * d3 - d2 * b3) - b1 * (a2 * d3 - d2 * a3) + d1 * (a2 * b3 - b2 * a3);
+
+            double x = dx / det;
+            double y = dy / det;
+            double z = dz / det;
+            return new point3D { X = x, Y = y, Z = z };
+        }
+        private bool IsFeasible3D(point3D p, List<Lpp_Solver.Models.Constraint> constraints)
+        {
+            double tolerance = 1e-6; // هامش خطا
+
+            foreach (var constraint in constraints)
+            {
+                double lhs = constraint.Coefficients[0] * p.X 
+                    + constraint.Coefficients[1] * p.Y +constraint.Coefficients[2]*p.Z;
+                double rhs = constraint.RightHandSide;
+
+                switch (constraint.Relation)
+                {
+                    case "<=":
+                        if (lhs > rhs + tolerance) return false;
+                        break;
+                    case ">=":
+                        if (lhs < rhs - tolerance) return false;
+                        break;
+                    case "=":
+                        if (Math.Abs(lhs - rhs) > tolerance) return false;
+                        break;
+                }
+            }
+            return true;
+        }
+        public GraphicalResult3D SolveGraphically3D(LPP lpp)
+        {
+            var allConstraints = new List<Lpp_Solver.Models.Constraint>(lpp.Constraints);
+            allConstraints.Add(new Lpp_Solver.Models.Constraint { Coefficients = new double[] { 1, 0, 0 }, Relation = ">=", RightHandSide = 0 });
+            allConstraints.Add(new Lpp_Solver.Models.Constraint { Coefficients = new double[] { 0, 1, 0 }, Relation = ">=", RightHandSide = 0 });
+            allConstraints.Add(new Lpp_Solver.Models.Constraint { Coefficients = new double[] { 0, 0, 1 }, Relation = ">=", RightHandSide = 0 });
+
+            var feasibleVertices = new List<point3D>();
+            for (int i = 0; i < allConstraints.Count - 2; i++)
+            {
+                for (int j = i + 1; j < allConstraints.Count - 1; j++)
+                {
+                    for (int k = j + 1; k < allConstraints.Count; k++)
+                    {
+                        var c1 = allConstraints[i];
+                        var c2 = allConstraints[j];
+                        var c3 = allConstraints[k];
+
+                        var point = SolveThreeEquations(c1, c2, c3);
+                        if (point != null)
+                        {
+                            if (IsFeasible3D(point, allConstraints))
+                                feasibleVertices.Add(point);
+                        }
+                    }
+                }
+            }
+            feasibleVertices = feasibleVertices
+                .GroupBy(p => new { X = Math.Round(p.X, 5), Y = Math.Round(p.Y, 5), Z = Math.Round(p.Z, 5) })
+                .Select(g => g.First())
+                .ToList();
+            foreach (var p in feasibleVertices)
+            {
+                p.F = lpp.ObjectiveCoefficients[0] * p.X +
+                           lpp.ObjectiveCoefficients[1] * p.Y +
+                           lpp.ObjectiveCoefficients[2] * p.Z;
+            }
+            bool isMax = IsMaximization(lpp);
+            point3D optimal = null;
+
+            if (feasibleVertices.Count > 0)
+            {
+                optimal = isMax ? feasibleVertices.OrderByDescending(p => p.F).First()
+                                 : feasibleVertices.OrderBy(p => p.F).First();
+            }
+
+            var result = new GraphicalResult3D
+            {
+                FeasibleVertices = feasibleVertices,
+                OptimalPoint = optimal,
+                Status = feasibleVertices.Count == 0 ? "Infeasible" : "Optimal",
+                ObjectiveValue = optimal?.F ?? 0,
+                VariableValues = new Dictionary<string, double>
+        {
+            {"x1", optimal?.X ?? 0},
+            {"x2", optimal?.Y ?? 0},
+            {"x3", optimal?.Z ?? 0}
+        }
+            };
+
+            return result;
         }
     }
 }

@@ -5,7 +5,69 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/LPPsolver": {
+    "/api/LPPsolver/Numerical": {
+      "post": {
+        "tags": [
+          "LPPsolver"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LPP"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LPP"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LPP"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LPPsolver/graphical2D": {
+      "post": {
+        "tags": [
+          "LPPsolver"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LPP"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LPP"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LPP"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LPPsolver/graphical3D": {
       "post": {
         "tags": [
           "LPPsolver"

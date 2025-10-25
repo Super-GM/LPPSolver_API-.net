@@ -3,6 +3,7 @@ using Lpp_Solver.Models;
 using Lpp_Solver.services;
 using System;
 using System.Linq;
+using System.Diagnostics;
 namespace Lpp_Solver.Controllers
 {
     [ApiController]
@@ -15,32 +16,57 @@ namespace Lpp_Solver.Controllers
         {
             _solverservice = solverservice;
         }
-
-        [HttpPost]
-        public IActionResult Solve([FromBody] LPP lpp)
+        [HttpPost("Numerical")]
+        public IActionResult SolveNumerically([FromBody] LPP lpp)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            if (lpp.Objectivecoefficient == null || lpp.Objectivecoefficient.Length < 2)
-            {
-                return BadRequest(new { error = "identify at least two variables" });
-            }
             try
             {
-                SolutionResult result = _solverservice.Solve(lpp);
-                    return Ok(result);
+                var result = _solverservice.SolveNumerically(lpp);
+                return Ok(result);
             }
-            catch (ArgumentException ex)
+            catch (Exception ex)
             {
-                return BadRequest(new { error = $"input data error : {ex.Message}" });
+                return StatusCode(500, new { error = ex.Message, StackTrace = ex.StackTrace });
             }
-            catch (Exception)
-            {
-                return StatusCode(500, new { error = "Unexpected internal error while processing the issue" });
-            }
+        }
 
+        [HttpPost("graphical2D")]
+        public IActionResult SolveGraphically2D([FromBody] LPP lpp)
+        {
+            try
+            {
+                var result = _solverservice.SolveGraphically2D(lpp);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("🔥 ERROR MESSAGE: " + ex.Message);
+                Console.WriteLine("📜 STACK TRACE: " + ex.StackTrace);
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine("💥 INNER EXCEPTION: " + ex.InnerException.Message);
+                }
+
+                return StatusCode(500, new
+                {
+                    error = ex.Message,
+                    stackTrace = ex.StackTrace,
+                    inner = ex.InnerException?.Message
+                });
+            }
+        }
+        [HttpPost("graphical3D")]
+        public IActionResult SolveGraphically3D([FromBody] LPP lpp)
+        {
+            try
+            {
+                var result = _solverservice.SolveGraphically3D(lpp);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = ex.Message, StackTrace = ex.StackTrace });
+            }
         }
 
     }

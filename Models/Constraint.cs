@@ -1,9 +1,14 @@
-﻿namespace Lpp_Solver.Models
+﻿using System.Text.Json.Serialization;
+namespace Lpp_Solver.Models
 {
     public class Constraint
     {
-        public double[]? coefficient { get; set; }
-        public string? relation { get; set; }
-        public double righthandside { get; set; }
+        [JsonPropertyName("Coefficients")]
+        public double[]? Coefficients { get; set; }
+        [JsonPropertyName("Relation")]
+
+        public string? Relation { get; set; }
+        [JsonPropertyName("Righthandside")]
+        public double RightHandSide { get; set; }
     }
 }
